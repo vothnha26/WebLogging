@@ -29,11 +29,10 @@ public class Logout extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 		//Hủy Session
 		HttpSession session = request.getSession();
 		session.invalidate();
-		request.getRequestDispatcher("Login.html").include(request, response);
+		request.getRequestDispatcher("loginSession.html").include(request, response);
 	}
 
 	/**

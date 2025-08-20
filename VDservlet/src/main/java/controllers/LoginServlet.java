@@ -27,9 +27,9 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws
-    ServletException, IOException {
-    	resp.getWriter().append("Mật khẩu không chính xác");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	response.setContentType("text/html");
+    	response.getWriter().append("Mật khẩu không chính xác");
     }
 
 	/**

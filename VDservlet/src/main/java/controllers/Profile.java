@@ -30,17 +30,19 @@ public class Profile extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-				HttpSession session = request.getSession();
-				PrintWriter out = response.getWriter();
+		response.setContentType("text/html");
+		HttpSession session = request.getSession();
+		PrintWriter out = response.getWriter();
 
-				if(session!=null){
-					String name=(String)session.getAttribute("name");
-					out.print("Chào bạn, "+name+" đến với trang quản lý tài khoản");
-				}
-				else {
-					out.print("Xin vui lòng đăng nhập");
-					response.sendRedirect("/HelloServlet/Login.html");
-				}
+		if(session!=null){
+			String name=(String)session.getAttribute("name");
+			out.print("Chào bạn, "+name+" đến với trang quản lý tài khoản");
+			out.println("<a href='logout'>Đăng xuất</a>");
+		}
+		else {
+			out.print("Xin vui lòng đăng nhập<br>");
+		    request.getRequestDispatcher("loginSession.html").include(request, response);
+		}
 	}
 
 	/**
