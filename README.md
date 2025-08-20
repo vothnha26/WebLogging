@@ -12,8 +12,8 @@ Người dùng đăng nhập bằng **username** và **password** cố định. 
 - **Password:** kikaho
 
 ---
-Chú thích:
 <img width="473" height="558" alt="image" src="https://github.com/user-attachments/assets/3a191d3b-68ef-4386-b107-3fc241edf6d7" />
+Ghi chú:
 ### 1. Chức năng Đăng nhập bằng Cookie
 
 - **`Login.html`**: Form giao diện cho người dùng nhập thông tin đăng nhập.
@@ -26,3 +26,4 @@ Chú thích:
 - **`LoginServletSession.java`**: Xử lý logic đăng nhập. Nếu thành công, servlet này sẽ tạo một `Session` trên server để lưu trữ trạng thái đăng nhập.
 - **`Profile.java`**: Trang thông tin cá nhân. Yêu cầu người dùng phải có `Session` hợp lệ mới có thể truy cập.
 - **`Logout.java`**: Xử lý chức năng đăng xuất bằng cách tìm và hủy `Session` của người dùng trên server.
+
